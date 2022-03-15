@@ -20,7 +20,6 @@
 //   return tag ? result : newObj
 // }
 
-
 // 订阅模式
 // class EventEmitter {
 //   constructor() {
@@ -100,7 +99,6 @@
 //   }
 // }
 
-
 // 观察者模式  Observer  一个目标对应多个观察者   目标负责维护和观察者之间的联系  目标状态变更通知所有观察者
 // 目标类
 // class Subject {
@@ -141,7 +139,6 @@
 //   }
 // }
 
-
 // 列表转树
 const data = [
   // 注意这里，专门把pid为1的元素放一个在前面
@@ -151,20 +148,17 @@ const data = [
   { id: 4, name: '部门4', pid: 3 },
   { id: 5, name: '部门5', pid: 4 },
   { id: 7, name: '部门7', pid: 6 },
-]
+];
 
 function toTree(list) {
-  const obj = {}
-  const result = []
+  const obj = {};
+  const result = [];
 
   list.forEach((item) => {
     obj[id] = {
-      ...item
-    }
+      ...item,
+    };
+  });
 
-    
-
-  })
-
-  return result
+  return result;
 }
