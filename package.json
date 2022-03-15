@@ -2,10 +2,9 @@
   "name": "interviewSource",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "prettier --write src/ && eslint --fix --ext .js src/",
+    "lint": "prettier --write src/ && eslint --fix --ext .ts src/",
     "prepare": "husky install",
     "cz": "npx git-cz",
     "commit": "sh commit.sh"
@@ -16,6 +15,8 @@
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
     "@commitlint/config-conventional": "^16.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
     "commitizen": "^4.2.4",
     "commitlint": "^16.2.1",
     "commitlint-config-cz": "^0.13.3",
@@ -26,7 +27,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
   },
   "config": {
     "commitizen": {

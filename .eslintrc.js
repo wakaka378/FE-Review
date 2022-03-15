@@ -4,11 +4,15 @@ module.exports = {
     es6: true,
     node: true,
   },
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
     requireConfigFile: false,
   },
-  extends: ['plugin:prettier/recommended', 'prettier'],
-  plugins: ['prettier'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+  ],
+  plugins: ['@typescript-eslint'],
 };
