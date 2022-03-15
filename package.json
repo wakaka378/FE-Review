@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "prettier --write . && eslint --fix --ext .js,.vue",
+    "lint": "prettier --write src/ && eslint --fix --ext .js src/",
     "prepare": "husky install",
     "cz": "npx git-cz",
     "commit": "sh commit.sh"

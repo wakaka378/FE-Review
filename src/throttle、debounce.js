@@ -4,7 +4,7 @@
  * @param {*} fn
  * @param {*} wait
  */
-function throttle(fn, wait=500) {
+function throttle(fn, wait = 500) {
   // 定时器版本
   /* let timer = null
   return function (..args) {
@@ -17,18 +17,17 @@ function throttle(fn, wait=500) {
   } */
 
   // 时间戳版本
-  let time = Date.now()
+  let time = Date.now();
 
   // 对比两个时间是否超过wait时间
-  return function(...args) {
-    const isTimeOut = Date.now() - time >= wait
+  return function (...args) {
+    const isTimeOut = Date.now() - time >= wait;
     if (isTimeOut) {
-      fn.apply(null, args)
-      time = Date.now()
+      fn.apply(null, args);
+      time = Date.now();
     }
-  }
+  };
 }
-
 
 /**
  * 防抖 在规定时间后内执行 如果多次触发则重新计时
@@ -36,18 +35,18 @@ function throttle(fn, wait=500) {
  * @param {*} fn
  * @param {number} [wait=500]
  */
-function debounce(fn, wait=500) {
-  let timer = null
+function debounce(fn, wait = 500) {
+  let timer = null;
 
   return function (...args) {
     if (timer) {
-      clearTimeout(timer)
-      timer = null
-    } else [
-      timer = setTimeout(() => {
-        fn.apply(this, args)
-      }, wait);
-    ]
-
-  }
+      clearTimeout(timer);
+      timer = null;
+    } else
+      [
+        (timer = setTimeout(() => {
+          fn.apply(this, args);
+        }, wait)),
+      ];
+  };
 }
