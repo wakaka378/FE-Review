@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "prettier --write . && eslint --fix --ext .js,.vue",
     "prepare": "husky install",
+    "cz": "npx git-cz",
     "commit": "sh commit.sh"
   },
   "keywords": [],
