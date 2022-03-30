@@ -8,11 +8,11 @@ module.exports = {
     },
     {
       value: ':sparkles: feat',
-      name: '✨  feat:     A new feature',
+      name: '✨  feat:     新的特性',
     },
     {
       value: ':bug: fix',
-      name: '🐛  fix:      A bug fix',
+      name: '🐛  fix:      修复一个bug',
     },
     {
       value: ':hammer: refactor',
