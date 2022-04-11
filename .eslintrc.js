@@ -3,6 +3,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    browser: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -10,9 +11,8 @@ module.exports = {
     requireConfigFile: false,
   },
   extends: [
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'prettier',
+    'plugin:@typescript-eslint/recommended',
   ],
   plugins: ['@typescript-eslint'],
 };

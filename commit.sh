@@ -2,6 +2,6 @@
 
 git add .
 
-npx git-cz
+pnpm git-cz
 
 git push origin

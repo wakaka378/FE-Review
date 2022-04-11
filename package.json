@@ -1,35 +1,68 @@
 {
-  "name": "interviewSource",
-  "version": "1.0.0",
+  "name": "fe-review",
+  "version": "3.1.3",
+  "packageManager": "pnpm@6.32.3",
   "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "prettier --write src/ && eslint --fix --ext .ts src/",
-    "prepare": "husky install",
-    "cz": "npx git-cz",
-    "commit": "sh commit.sh"
-  },
   "keywords": [],
-  "author": "",
+  "homepage": "https://github.com/wakaka378/[FE-Review]#readme",
+  "bugs": {
+    "url": "https://github.com/wakaka378/[FE-Review]/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gebilaofan/[FE-Review].git"
+  },
+  "license": "MIT",
+  "author": "gebilaofan <gebilaofan@163.com>",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "prettier --write . && eslint --fix --ext .js,.ts,.vue",
+    "prepare": "husky install",
+    "commit": "sh commit.sh",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "release": "standard-version",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/eslint-parser": "^7.17.0",
+    "@babel/types": "^7.17.0",
     "@commitlint/config-conventional": "^16.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
     "commitizen": "^4.2.4",
     "commitlint": "^16.2.1",
     "commitlint-config-cz": "^0.13.3",
-    "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
-    "eslint": "^8.7.0",
+    "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
+    "pnpm": "6.32.3",
     "prettier": "^2.5.1",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.2"
+    "standard-version": "^9.3.2",
+    "typescript": "^4.6.3"
   },
   "config": {
     "commitizen": {

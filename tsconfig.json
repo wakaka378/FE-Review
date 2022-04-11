@@ -1,14 +1,18 @@
 {
-  // 编译选项
   "compilerOptions": {
-    "target": "ES5", // 指定ECMAScript目标版本
-    "module": "CommonJS", // 指定生成哪个模块系统代码：
-    "removeComments": true, // 删除所有注释，除了以 /!*开头的版权信息。
-    "preserveConstEnums": true, // 保留 const和 enum声明。
-    "sourceMap": true, // 生成相应的 .map文件。
-    "declaration": true // 生成相应的 .d.ts文件。
+    "outDir": "./dist",
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "types": ["node"]
   },
-
-  // 匹配文件
-  "include": ["./src/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "test/**/*", "dist/**"]
 }
